@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Route, Link, Switch } from "react-router-dom";
 import Main from './Main'
+import Navigation from './Nav'
 
 function App() {
   return (
@@ -11,10 +12,12 @@ function App() {
      <Route exact path="/">
      <Main/>
      </Route>
-     
-
-
+     <Route path="/menu"></Route>
+     <Route path="/offers"></Route>
+     <Route path="/about"></Route>
+     <Route path="/cart"></Route>
     </main>
+     <Navigation/>
     </div>
   );
 }

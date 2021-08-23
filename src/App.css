@@ -5,7 +5,6 @@
   text-align: center;
   background-color: black;
   background-size:cover; 
-  height:100%; 
   width: 100%;
   margin:0; 
   color:white; 
@@ -45,6 +44,27 @@
     transform: rotate(360deg);
   }
 }
+
+/* navbar */
+.navbar {
+  border-bottom: solid 1px #EBEBEB;
+}
+.bottom-tab-nav {
+  border-top: solid 1px #EBEBEB;
+}
+.nav-link,
+.bottom-nav-link {
+  color: #55575b;
+}
+.bottom-nav-link.active {
+  color: #922c88;
+}
+.bottom-tab-label {
+  font-size: 12px;
+}
+
+
+
 
 /* dropdown */
 .main p{
