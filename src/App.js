@@ -45,7 +45,7 @@ function App() {
       .then((data) => setIce(data));
   };
 
-  useEffect(() => getDrink(), []);
+  useEffect(() => getIce(), []);
   const [drink, setDrink] = useState([]);
   const getDrink = () => {
     fetch(url + "/drinks")
