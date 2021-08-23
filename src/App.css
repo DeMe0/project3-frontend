@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+
+}
+
+.menubutton{
+  display: flex;
+  flex-direction: column;
+}
+
+.drinks{
+  background-color: green;
+  color: red; 
+  font-size: 30px;
+  margin: 4px 2px;
+  border-radius: 100%;
 }
 
 .App-logo {
