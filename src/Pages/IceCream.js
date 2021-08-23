@@ -1,8 +1,16 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const IceCream = () => {
     return(
-        <h1>I SCREAM</h1>
+        <div>
+            <h1>I SCREAM</h1>
+            <Link to ='/menu'>
+                <button className ='menu'>
+
+                </button>
+                </Link>
+        </div>
+        
     )
 }
 export default IceCream

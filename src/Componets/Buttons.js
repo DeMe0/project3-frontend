@@ -6,7 +6,7 @@ const Button = () => {
         <>
         <Link to ='/drinks'>
             <button className ='drinks'>
-
+            
             </button>
         </Link>
         <Link to ='/icecreams'>
