@@ -66,9 +66,9 @@ function App() {
           <Button />
         </Route>
         <Route exact path="/drinks" render={() => <Drink />}></Route>
-        <Route exact path="/icecreams" render={() => <IceCream />}></Route>
-        <Route exact path="/italianices" render={() => <ItalianIce />}></Route>
-        <Route exact path="/popsicles" render={() => <Popsicle />}></Route>
+        <Route exact path="/icecream" render={() => <IceCream icecreams = {icecreams}/>}></Route>
+        <Route exact path="/ice" render={() => <ItalianIce ices = {ice}/>}></Route>
+        <Route exact path="/popsicles" render={() => <Popsicle popsicles = {popsicles}/>}></Route>
         <Route path="/offers"></Route>
         <Route path="/about"></Route>
         <Route path="/cart"></Route>

@@ -9,12 +9,12 @@ const Button = () => {
                 <AiOutlineArrowRight />
             </button>
         </Link>
-        <Link to ='/icecreams'>
+        <Link to ='/icecream'>
             <button className ='drinks'>
             <AiOutlineArrowRight />
             </button>
         </Link>
-        <Link to ='/italianices'>
+        <Link to ='/ices'>
             <button className ='drinks'>
             <AiOutlineArrowRight className = 'icearrow'/>
             </button>
