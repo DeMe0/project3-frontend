@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from './Carousel'
+import Parlour from './Parlour'
+
 
 const Main = (props) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -23,6 +25,8 @@ const Main = (props) => {
         </Dropdown>
         <h2>Ice Cream of the Day</h2>
         <Carousel/>
+        <Parlour  parlours={props.parlours}
+        />
         </div>
     ); 
 }

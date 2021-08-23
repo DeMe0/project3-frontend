@@ -38,8 +38,12 @@ const Navigation = () => {
                 <NavItem key={`tab-${index}`}>
                   <NavLink to={tab.route} className="nav-link" activeClassName="active">
                     <div className="row d-flex flex-column justify-content-center align-items-center">
+                      <div className='navicons'>
                       <FontAwesomeIcon className="icon" icon={tab.icon}/>
-                      <div>{tab.label}</div>
+                      {tab.label}
+                      </div>
+                      
+                      
                     </div>
                   </NavLink>
                 </NavItem>

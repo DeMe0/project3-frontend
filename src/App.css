@@ -1,18 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+body .app{
+  background-color: black;
+  height:1vh; 
+}
 
 .App {
   text-align: center;
   background-color: black;
   background-size:cover; 
+  height:100%; 
   width: 100%;
   margin:0; 
   color:white; 
 }
 
 .App .logo{ 
+  width:80%; 
   margin-top:-5%; 
-  margin-bottom:-5%; 
+  margin-bottom:-14%; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -22,7 +28,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,6 +53,8 @@
 /* navbar */
 .navbar {
   border-bottom: solid 1px #EBEBEB;
+  background-color: black;
+  opacity:.8; 
 }
 .bottom-tab-nav {
   border-top: solid 1px #EBEBEB;
@@ -63,18 +70,25 @@
   font-size: 12px;
 }
 
+.navicons{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color:white; 
+}
+
 
 
 
 /* dropdown */
 .main p{
   text-align: left;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: -5%; 
 }
 .main .dropdown{
   text-align:left; 
-  margin-left: 10%;
+  margin-left: 5%;
 }
 /* carousel */
 .main h2{
@@ -85,9 +99,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size:35px;
+  margin-top:15px; 
 }
 .Carousel{
-  width:80%; 
+  width:90%; 
   margin:0 auto; 
 }
 .carousel-item {
@@ -96,8 +111,8 @@
 }
 
 .carousel-item img{
-   width:48%;
-   height:550px; 
+   width:80%;
+   height:280px; 
    margin:0 auto; 
 }
 
@@ -113,3 +128,46 @@
    font-size:20px; 
 }
 
+@media screen and (min-width: 768px){
+  .App .logo{ 
+    width:60%; 
+    margin-top:-10%; 
+    margin-bottom:-15%; 
+  }
+  .carousel-item img{
+    width:70%;
+    height:400px; 
+    margin:0 auto; 
+ }
+ 
+}
+
+@media screen and (min-width: 1024px){
+  .App .logo{ 
+    width:44%; 
+    margin-top:-10%; 
+    margin-bottom:-14%; 
+  }
+  .carousel-item img{
+    width:56%;
+    height:480px; 
+    margin:0 auto; 
+ }
+}
+@media screen and (min-width: 1440px){
+  .App .logo{ 
+    width:33%; 
+    margin-top:-9%; 
+    margin-bottom:-10%; 
+  }
+  .Carousel{
+    width:80%; 
+    margin:0 auto; 
+  }
+  .carousel-item img{
+    width:45%;
+    height:530px; 
+    margin:0 auto; 
+ }
+ 
+}
