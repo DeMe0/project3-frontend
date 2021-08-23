@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
 .App {
   text-align: center;
+  background-color: black;
+  background-size:cover; 
+  height:100%; 
+  width: 100%;
+  margin:0; 
+  color:white; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .logo{ 
+  margin-top:-5%; 
+  margin-bottom:-5%; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +45,51 @@
     transform: rotate(360deg);
   }
 }
+
+/* dropdown */
+.main p{
+  text-align: left;
+  margin-left: 10%;
+  margin-top: -5%; 
+}
+.main .dropdown{
+  text-align:left; 
+  margin-left: 10%;
+}
+/* carousel */
+.main h2{
+  background: pink;
+  background: -webkit-radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  background: -moz-radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  background: radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:35px;
+}
+.Carousel{
+  width:80%; 
+  margin:0 auto; 
+}
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item img{
+   width:48%;
+   height:550px; 
+   margin:0 auto; 
+}
+
+.carousel-item .caption{
+   vertical-align: baseline;
+   height:15%; 
+   /* text-align:center;  */
+   background-color: black;
+   color:white; 
+   background-size: cover;
+   opacity: 0.8; 
+   font-family: 'Lobster', cursive;
+   font-size:20px; 
+}
+
