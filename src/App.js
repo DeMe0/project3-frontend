@@ -45,7 +45,15 @@ function App() {
       .then((data) => setIce(data));
   };
 
-  useEffect(() => getIce(), []);
+  useEffect(() => getDrink(), []);
+  const [drink, setDrink] = useState([]);
+  const getDrink = () => {
+    fetch(url + "/drinks")
+      .then((response) => response.json())
+      .then((data) => setDrink(data));
+  };
+
+  useEffect(() => getDrink(), []);
 
   return (
     <div className="App">
@@ -65,7 +73,7 @@ function App() {
         >
           <Button />
         </Route>
-        <Route exact path="/drinks" render={() => <Drink />}></Route>
+        <Route exact path="/drinks" render={() => <Drink drinks = {drink}/>}></Route>
         <Route exact path="/icecream" render={() => <IceCream icecreams = {icecreams}/>}></Route>
         <Route exact path="/ice" render={() => <ItalianIce ices = {ice}/>}></Route>
         <Route exact path="/popsicles" render={() => <Popsicle popsicles = {popsicles}/>}></Route>

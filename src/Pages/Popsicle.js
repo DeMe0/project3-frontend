@@ -4,7 +4,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 const Popsicle = (props) => {
 const {popsicles} = props
     const loaded = () => (
-        <div className="icecream" >
+        <div className="popsicles" >
         {popsicles.map((popsicle) => (         
            
            <article>            

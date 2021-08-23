@@ -5,7 +5,7 @@ const ItalianIce= (props, index) => {
     const {ices} = props
     // console.log(icecreams)
     const loaded = () => (
-        <div className="icecream" key ={index}>
+        <div className="italianices" key ={index}>
         {ices.map((ice) => (
             
             
