@@ -5,22 +5,22 @@ const Button = () => {
     return(
         <div className = "menubutton">
         <Link to ='/drinks'>
-            <button className ='drinks'>
+            <button className ='menubutton'>
                 <AiOutlineArrowRight />
             </button>
         </Link>
-        <Link to ='/icecreams'>
-            <button className ='drinks'>
+        <Link to ='/icecream'>
+            <button className ='menubutton'>
             <AiOutlineArrowRight />
             </button>
         </Link>
-        <Link to ='/italianices'>
-            <button className ='drinks'>
+        <Link to ='/ice'>
+            <button className ='menubutton'>
             <AiOutlineArrowRight className = 'icearrow'/>
             </button>
         </Link>
         <Link to ='/popsicles'>
-            <button className ='drinks'>
+            <button className ='menubutton'>
             <AiOutlineArrowRight />
             </button>
         </Link>

@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-body .app{
-  background-color: black;
-  height:1vh; 
-}
-
 .App {
   text-align: center;
-
+  background-color: black;
+  background-size:cover;
+  height:100%;
+  width: 100%;
+  margin:0;
+  color:white;
+}
+.App .logo{
+  width:80%;
+  margin-top:-5%;
+  margin-bottom:-14%;
 }
 
 .menubutton{
