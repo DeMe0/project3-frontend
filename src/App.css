@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body .app{
+  background-color: black;
+  height:1vh; 
+}
+
 .App {
   text-align: center;
 
@@ -21,11 +28,18 @@ button.menu{
   font-size: 30px;
   margin: 4px 2px;
   border-radius: 100%;
+  background-color: black;
+  background-size:cover; 
+  height:100%; 
+  width: 100%;
+  margin:0; 
+  color:white; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .logo{ 
+  width:80%; 
+  margin-top:-5%; 
+  margin-bottom:-14%; 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,7 +49,6 @@ button.menu{
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -56,4 +69,124 @@ button.menu{
   to {
     transform: rotate(360deg);
   }
+}
+
+/* navbar */
+.navbar {
+  border-bottom: solid 1px #EBEBEB;
+  background-color: black;
+  opacity:.8; 
+}
+.bottom-tab-nav {
+  border-top: solid 1px #EBEBEB;
+}
+.nav-link,
+.bottom-nav-link {
+  color: #55575b;
+}
+.bottom-nav-link.active {
+  color: #922c88;
+}
+.bottom-tab-label {
+  font-size: 12px;
+}
+
+.navicons{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color:white; 
+}
+
+
+/* dropdown */
+.main p{
+  text-align: left;
+  margin-left: 5%;
+  margin-top: -5%; 
+}
+.main .dropdown{
+  text-align:left; 
+  margin-left: 5%;
+}
+/* carousel */
+.main h2{
+  background: pink;
+  background: -webkit-radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  background: -moz-radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  background: radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:35px;
+  margin-top:15px; 
+}
+.Carousel{
+  width:90%; 
+  margin:0 auto; 
+}
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-item img{
+   width:80%;
+   height:280px; 
+   margin:0 auto; 
+}
+
+.carousel-item .caption{
+   vertical-align: baseline;
+   height:15%; 
+   /* text-align:center;  */
+   background-color: black;
+   color:white; 
+   background-size: cover;
+   opacity: 0.8; 
+   font-family: 'Lobster', cursive;
+   font-size:20px; 
+}
+
+@media screen and (min-width: 768px){
+  .App .logo{ 
+    width:60%; 
+    margin-top:-10%; 
+    margin-bottom:-15%; 
+  }
+  .carousel-item img{
+    width:70%;
+    height:400px; 
+    margin:0 auto; 
+ }
+ 
+}
+
+@media screen and (min-width: 1024px){
+  .App .logo{ 
+    width:44%; 
+    margin-top:-10%; 
+    margin-bottom:-14%; 
+  }
+  .carousel-item img{
+    width:56%;
+    height:480px; 
+    margin:0 auto; 
+ }
+}
+@media screen and (min-width: 1440px){
+  .App .logo{ 
+    width:33%; 
+    margin-top:-9%; 
+    margin-bottom:-10%; 
+  }
+  .Carousel{
+    width:80%; 
+    margin:0 auto; 
+  }
+  .carousel-item img{
+    width:45%;
+    height:530px; 
+    margin:0 auto; 
+ }
+ 
 }
