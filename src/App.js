@@ -66,7 +66,6 @@ function App() {
           <Button />
         </Route>
         <Route exact path="/drinks" render={() => <Drink />}></Route>
-
         <Route exact path="/icecreams" render={() => <IceCream />}></Route>
         <Route exact path="/italianices" render={() => <ItalianIce />}></Route>
         <Route exact path="/popsicles" render={() => <Popsicle />}></Route>
