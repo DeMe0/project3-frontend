@@ -25,6 +25,7 @@ const Main = (props) => {
         </Dropdown>
         <h2>Ice Cream of the Day</h2>
         <Carousel/>
+        <h3 className="subtitle">Parlours Near You </h3>
         <Parlour  parlours={props.parlours}
         />
         </div>
