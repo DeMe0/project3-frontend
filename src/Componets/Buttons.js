@@ -14,7 +14,7 @@ const Button = () => {
             <AiOutlineArrowRight />
             </button>
         </Link>
-        <Link to ='/ices'>
+        <Link to ='/ice'>
             <button className ='drinks'>
             <AiOutlineArrowRight className = 'icearrow'/>
             </button>
