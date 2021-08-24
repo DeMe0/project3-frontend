@@ -7,12 +7,14 @@ import { faCartArrowDown} from '@fortawesome/free-solid-svg-icons';
 const Popsicle = (props) => {
 const {popsicles} = props
     const loaded = () => (
-        <div className="popsicles" > 
-              <Link to ='/menu'>
+      <>
+       <Link to ='/menu'>
                 <button className ='menu'>
                 <AiOutlineArrowLeft />
                 </button>
                  </Link>
+         <div className="popsicles" > 
+             
         {popsicles.map((popsicle) => (         
            <article>  
              <img src={popsicle.img} />          
@@ -24,6 +26,8 @@ const {popsicles} = props
        ))}
       
           </div>
+      </>
+       
            )
        
            const loading = <h1>Loading...</h1>
