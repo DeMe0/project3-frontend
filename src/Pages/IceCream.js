@@ -9,12 +9,14 @@ const IceCream = (props, index) => {
     const {icecreams} = props
     // console.log(icecreams)
     const loaded = () => (
-        <div className="icecream" key ={index}> 
-        <Link to ='/menu'>
+   <div>
+      <Link to ='/menu'>
        <button className ='menu'>
         <AiOutlineArrowLeft />
        </button>
         </Link>
+   <div className="icecream" key ={index}> 
+        
         {icecreams.map((icecream) => (
            <article>
             <img src={icecream.img} />
@@ -24,6 +26,8 @@ const IceCream = (props, index) => {
           </article>
        ))}
           </div>
+       </div>
+      
            )
        
            const loading = <h1>Loading...</h1>

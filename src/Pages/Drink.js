@@ -5,14 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown} from '@fortawesome/free-solid-svg-icons';
 
 const Drink = (props) => {
+   
     const {drinks} = props      
         const loaded = () => (
+            <div>
+                <Link to ='/menu'>
+            <button className ='menu'>
+            <AiOutlineArrowLeft />
+            </button>
+             </Link>
             <div  className = 'drinks'>
-            <Link to ='/menu'>
+            {/* <Link to ='/menu'>
                     <button className ='menu'>
                     <AiOutlineArrowLeft />
                     </button>
-                     </Link>
+                     </Link> */}
             {drinks.map((drink) => (               
                <article>
                 <img src={drink.img} />
@@ -22,6 +29,9 @@ const Drink = (props) => {
               </article>
            ))}
               </div>
+
+            </div>
+            
                )
            
                const loading = <h1>Loading...</h1>

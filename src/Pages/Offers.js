@@ -5,12 +5,14 @@ const Offers = (props) => {
     const {offers} = props
     // console.log(icecreams)
     const loaded = () => (
-        <div className="offers" >
-              <Link to ='/menu'>
+      <>
+      <Link to ='/menu'>
                 <button className ='menu'>
                 <AiOutlineArrowLeft />
                 </button>
-                 </Link>
+       </Link>
+       <div className="offers" >
+              
           
         {offers.map((offer) => (
             
@@ -25,6 +27,8 @@ const Offers = (props) => {
           </article>
        ))}
      </div>
+      </>
+       
            )
        
            const loading = <h1>Loading...</h1>

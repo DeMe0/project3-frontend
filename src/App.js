@@ -10,6 +10,7 @@ import ItalianIce from "./Pages/ItalianIce";
 import Popsicle from "./Pages/Popsicle";
 import Button from "./Componets/Buttons";
 import Offers from "./Pages/Offers";
+import Footer from "./Componets/Footer";
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
@@ -108,6 +109,7 @@ const filterParlours = (filter) => {
         <Route path="/about"></Route>
         <Route path="/cart"></Route>
       </main>
+      <Footer />
       <Navigation />
     </div>
   );
