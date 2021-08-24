@@ -14,12 +14,28 @@ import Offers from "./Pages/Offers";
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
   const [parlours, setParlours] = useState([]);
+  const [originalParlours, setOriginalParlours] = useState([])
+  
+
   const getParlours = () => {
     fetch(url + "/parlours")
       .then((response) => response.json())
-      .then((data) => setParlours(data));
+      .then((data) =>{
+         setOriginalParlours(data)
+         setParlours(data)});
   };
   useEffect(() => getParlours(), []);
+
+const filterParlours = (filter) => {
+  console.log(originalParlours)
+    let newState = originalParlours.filter((item) =>{
+      console.log(item.city, filter)
+      return item.city === filter
+      
+    })
+    
+    setParlours(newState)
+}
 
   const [icecreams, setIcecreams] = useState([]);
   const getIcecreams = () => {
@@ -76,7 +92,7 @@ function App() {
         <Route
           exact
           path="/"
-          render={(rp) => <Main {...rp} parlours={parlours} />}
+          render={(rp) => <Main {...rp} parlours={parlours} filterParlours = {filterParlours}/>}
         />
         <Route
           path="/menu"

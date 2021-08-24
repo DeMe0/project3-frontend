@@ -16,7 +16,7 @@ const Drink = (props) => {
             {drinks.map((drink) => (               
                <article>
                 <img src={drink.img} />
-                <h1>{drink.brand}</h1>
+                <h1>{drink.store}</h1>
                 <p>{drink.flavor}</p>
                 <p> $ {drink.price} <FontAwesomeIcon className="cart" icon={faCartArrowDown}/> </p>
               </article>
