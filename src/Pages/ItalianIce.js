@@ -1,29 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartArrowDown} from '@fortawesome/free-solid-svg-icons';
+
 const ItalianIce= (props, index) => {
     const {ices} = props
     // console.log(icecreams)
     const loaded = () => (
-        <div className="italianices" key ={index}>
-        {ices.map((ice) => (
-            
-            
-           <article>
-            
-             <h1>{ice.brand}</h1>
-             <img src={ice.img} />
-             <p>{ice.flavor}</p>
-             <p>{ice.price}</p>
-            
-          </article>
-       ))}
-       <Link to ='/menu'>
+        <div className="italianices" key ={index}> 
+               <Link to ='/menu'>
                 <button className ='menu'>
                 <AiOutlineArrowLeft />
                 </button>
                  </Link>
-          </div>
+        {ices.map((ice) => (    
+           <article> 
+             <img src={ice.img} /> 
+             <h1>{ice.brand}</h1>
+             <p>{ice.flavor}</p>
+             <p>$ {ice.price}<FontAwesomeIcon className="cart" icon={faCartArrowDown}/></p>
+          </article>
+       ))}</div>
            )
        
            const loading = <h1>Loading...</h1>

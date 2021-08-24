@@ -1,25 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartArrowDown} from '@fortawesome/free-solid-svg-icons';
+
 const Popsicle = (props) => {
 const {popsicles} = props
     const loaded = () => (
-        <div className="popsicles" >
-        {popsicles.map((popsicle) => (         
-           
-           <article>            
-             <h1>{popsicle.brand}</h1>
-             <img src={popsicle.img} />
-             <p>{popsicle.flavor}</p>
-             <p>{popsicle.price}</p>
-             
-           </article>
-       ))}
-       <Link to ='/menu'>
+        <div className="popsicles" > 
+              <Link to ='/menu'>
                 <button className ='menu'>
                 <AiOutlineArrowLeft />
                 </button>
                  </Link>
+        {popsicles.map((popsicle) => (         
+           <article>  
+             <img src={popsicle.img} />          
+             <h1>{popsicle.brand}</h1>
+             <p>{popsicle.flavor}</p>
+             <p>$ {popsicle.price}<FontAwesomeIcon className="cart" icon={faCartArrowDown}/> </p>
+             
+           </article>
+       ))}
+      
           </div>
            )
        
