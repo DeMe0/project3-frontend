@@ -186,6 +186,11 @@ button.menu{
   height: 165px;
 }
 
+/* menu */
+.BootstrapCard #cards{
+  width:100%; 
+  
+}
 /* ice-cream */
 .icecream{
   display:flex; 

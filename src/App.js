@@ -99,7 +99,6 @@ const filterParlours = (filter) => {
           path="/menu"
           render={(rp) => <Menu {...rp} parlours={parlours} />}
         >
-          <Button />
         </Route>
         <Route exact path="/drinks" render={() => <Drink drinks = {drink}/>}></Route>
         <Route exact path="/icecream" render={() => <IceCream icecreams = {icecreams}/>}></Route>
