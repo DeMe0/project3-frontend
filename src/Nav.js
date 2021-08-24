@@ -13,11 +13,13 @@ const tabs = [{
     route: "/offers",
     icon: faWallet,
     label: "Offers"
-  },{
+  },
+  {
     route: "/",
     icon: faStore,
     label: "Home"
-  },{
+  },
+   {
     route: "/about",
     icon: faUsers,
     label: "About"
