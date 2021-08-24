@@ -9,6 +9,7 @@ import IceCream from "./Pages/IceCream";
 import ItalianIce from "./Pages/ItalianIce";
 import Popsicle from "./Pages/Popsicle";
 import Button from "./Componets/Buttons";
+import Offers from "./Pages/Offers";
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
@@ -55,6 +56,16 @@ function App() {
 
   useEffect(() => getDrink(), []);
 
+  useEffect(() => getIce(), []);
+  const [offer, setOffer] = useState([]);
+  const getOffers = () => {
+    fetch(url + "/offers")
+      .then((response) => response.json())
+      .then((data) => setOffer(data));
+  };
+
+  useEffect(() => getOffers(), []);
+
   return (
     <div className="App">
       <img
@@ -77,7 +88,7 @@ function App() {
         <Route exact path="/icecream" render={() => <IceCream icecreams = {icecreams}/>}></Route>
         <Route exact path="/ice" render={() => <ItalianIce ices = {ice}/>}></Route>
         <Route exact path="/popsicles" render={() => <Popsicle popsicles = {popsicles}/>}></Route>
-        <Route path="/offers"></Route>
+        <Route path="/offers" render={() =><Offers offers={offer}/> }></Route>
         <Route path="/about"></Route>
         <Route path="/cart"></Route>
       </main>

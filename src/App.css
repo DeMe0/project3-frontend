@@ -178,6 +178,11 @@ button.menu{
   color:lightcoral; 
 }
 
+/* offers */
+.odisplay img{
+  width: 100px;
+  height: 165px;
+}
 
 /* ice-cream */
 .icecream{
