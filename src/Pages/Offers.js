@@ -1,8 +1,34 @@
+import { Link } from 'react-router-dom'
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
-const Offers = () => {
-    return(
-        <h1>NO OFFERS FOR NOW!</h1>
-    )
+const Offers = (props) => {
+    const {offers} = props
+    // console.log(icecreams)
+    const loaded = () => (
+        <div className="offers" >
+              <Link to ='/menu'>
+                <button className ='menu'>
+                <AiOutlineArrowLeft />
+                </button>
+                 </Link>
+          
+        {offers.map((offer) => (
+            
+            
+           <article className = 'odisplay'>
+            
+             <h1>{offer.title}</h1>
+             <img src={offer.img} />
+             <p>{offer.description}</p>
+             
+            
+          </article>
+       ))}
+     </div>
+           )
+       
+           const loading = <h1>Loading...</h1>
+           return offers.length > 0 ? loaded() : loading;
 }
 
 export default Offers
