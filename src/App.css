@@ -315,12 +315,16 @@ button.menu{
   font-size:30px;
 }
 
-
+/* Footer */
+.Footer{
+  margin-top: 8%;
+  margin-bottom: 20%;
+}
 @media screen and (min-width: 768px){
   .App .logo{ 
     width:60%; 
     margin-top:-10%; 
-    margin-bottom:-15%; 
+    padding-bottom:-15%; 
   };
 
   .Carousel{
