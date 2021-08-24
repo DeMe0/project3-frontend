@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Route, Link, Switch } from "react-router-dom";
 import Drink from './Drink'
@@ -6,9 +5,13 @@ import IceCream from './IceCream';
 import ItalianIce from './ItalianIce';
 import Popsicle from './Popsicle';
 import Button from '../Componets/Buttons'
-const Menu = () => {
+import Card from '../Componets/Card'
+
+const Menu = (props) => {
     return(
-        <h1>hey</h1>
+        <div className="cards">
+         <Card/>
+          </div>
        )
 }
 export default Menu

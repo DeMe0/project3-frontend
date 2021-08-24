@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 
 .App {
   text-align: center;
@@ -20,25 +21,12 @@
   flex-direction: column;
 }
 
-.drinks{
-  background-color: green;
-  color: red; 
-  font-size: 30px;
-  margin: 4px 2px;
-  border-radius: 100%;
-}
+
 button.menu{
-  background-color: green;
-  color: red; 
-  font-size: 30px;
-  margin: 4px 2px;
-  border-radius: 100%;
-  background-color: black;
-  background-size:cover; 
-  height:100%; 
-  width: 100%;
-  margin:0; 
   color:white; 
+  border: none;
+  background-color: black;
+  float: left;
 }
 
 .App .logo{ 
@@ -101,6 +89,12 @@ button.menu{
   align-items: center;
   flex-direction: column;
   color:white; 
+  transition-property: color;
+  transition-duration: 150ms;
+}
+
+.navicons:hover{
+  color:rgb(235, 94, 94); 
 }
 
 /* dropdown */
@@ -190,6 +184,138 @@ button.menu{
   height: 165px;
 }
 
+/* ice-cream */
+.icecream{
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-around; 
+   margin:10px; 
+   /* flex-direction: column; */
+}
+
+.icecream img{
+  width:100%; 
+  height:350px;
+}
+
+.icecream h1{
+  font-family: 'Sigmar One', cursive; 
+}
+
+.icecream p{
+  font-size:24px; 
+}
+
+.icecream .cart{
+  padding-left:8px;
+  transition-property:font-size;
+  transition-duration: 50ms;
+  size: 25px; 
+}
+
+.icecream .cart:hover{
+  font-size:30px;
+}
+
+/* popsicles */
+.popsicles {
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-around; 
+  margin:10px; 
+}
+
+.popsicles img{
+  width:100%; 
+  height:350px;
+}
+
+.popsicles h1{
+  font-family: 'Sigmar One', cursive; 
+}
+
+.popsicles p{
+  font-size:24px; 
+}
+
+.popsicles .cart{
+  padding-left:8px;
+  transition-property:font-size;
+  transition-duration: 50ms;
+  size: 25px; 
+}
+
+.popsicles .cart:hover{
+  font-size:30px;
+}
+
+/* drinks */
+.drinks {
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-around; 
+  margin:10px; 
+}
+
+.drinks img{
+  width:100%; 
+  height:350px;
+};
+
+.drinks h1 {
+  font-family: 'Sigmar One', cursive; 
+}
+
+.drinks p{
+  font-size:24px; 
+}
+
+.drinks .cart{
+  padding-left:8px;
+  transition-property:font-size;
+  transition-duration: 50ms;
+  size: 25px; 
+}
+
+.drinks .cart:hover{
+  font-size:30px;
+}
+
+/* italianices */
+
+.italianices {
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-around; 
+  margin:10px; 
+}
+
+.italianices img{
+  width:100%; 
+  height:300px;
+}
+
+.italianices h1{
+  font-family: 'Sigmar One', cursive; 
+  font-size: 35px; 
+}
+
+.italianices p{
+  font-size:24px; 
+}
+
+.italianices .cart{
+  padding-left:8px;
+  transition-property:font-size;
+  transition-duration: 50ms;
+  size: 25px; 
+}
+
+.italianices .cart:hover{
+  font-size:30px;
+}
+
+
 @media screen and (min-width: 768px){
   .App .logo{ 
     width:60%; 
@@ -198,7 +324,7 @@ button.menu{
   };
 
   .Carousel{
-    width:90%; 
+    width:100%; 
   }
 
  .carousel-item img{
@@ -224,6 +350,31 @@ button.menu{
   margin:5px; 
   margin-left:0%; 
 }
+
+.button menu{
+  margin-bottom: 20%;
+  }
+
+.icecream img{
+  width:600px; 
+  height:500px;
+}
+
+.popsicles img{
+  width:600px; 
+  height:500px;
+}
+
+.drinks img{
+  width:600px; 
+  height:550px;
+}
+
+.italianices img{
+  width:600px; 
+  height:500px;
+}
+
 }
 
 @media screen and (min-width: 1024px){
@@ -261,6 +412,18 @@ button.menu{
   margin-left:0%; 
 }
 
+
+.popsicles img{
+  width:600px; 
+  height:550px;
+}
+
+.italianices img{
+  width:550px; 
+  height:500px;
+}
+
+
 }
 @media screen and (min-width: 1440px){
   .App .logo{ 
@@ -295,3 +458,4 @@ button.menu{
   margin-left:0%; 
 }
 }
+
