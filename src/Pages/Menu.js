@@ -6,11 +6,15 @@ import ItalianIce from './ItalianIce';
 import Popsicle from './Popsicle';
 import Button from '../Componets/Buttons'
 import Card from '../Componets/Card'
+import BootstrapCard from '../Componets/Card';
+
 
 const Menu = (props) => {
     return(
         <div className="cards">
-         <Card/>
+            <Button />
+         <BootstrapCard/>
+          
           </div>
        )
 }
