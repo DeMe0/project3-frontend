@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sigmar+One&display=swap');
 
 .App {
   text-align: center;
@@ -179,15 +179,34 @@ button.menu{
 }
 
 /* offers */
+
+.bootstrapcard{
+   background-image: linear-gradient(315deg, #000000 90%, #ffffff 10%)
+   !important; 
+  opacity:.9; 
+  box-shadow: 8px 8px 8px #888888;
+  border-color: rgb(240, 191, 118) !important; 
+  margin:5px; 
+}
+
+
 .odisplay img{
-  width: 100px;
-  height: 165px;
+  width: 200px;
+  height: 180px;
+  margin:0 auto; 
+  padding-top:3px !important;
+}
+
+.bootstrapcard .title{
+  font-family: 'Pacifico', cursive !important;
+  margin-top:-15px;
+  font-size:25px; 
 }
 
 /* menu */
 .BootstrapCard #cards{
   width:100%; 
-  
+
 }
 /* ice-cream */
 .icecream{
@@ -320,6 +339,41 @@ button.menu{
   font-size:30px;
 }
 
+/*About*/
+.About h1{
+  /* display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center; */
+	font-weight: normal;
+	width: 100%;
+	text-align: center;
+	font-size: 8vw;
+	background: linear-gradient(
+		-45deg, 
+	  #4bc0c8 25%, 
+	  pink 25%, 
+	  pink 50%, 
+		#4bc0c8 50%, 
+		#4bc0c8 75%, 
+	  pink 75%, 
+		pink);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-position: 0 0;
+	animation: stripes 1s linear infinite;
+};
+
+.About p{
+  font-size:25px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.About img{
+  width:100%; 
+  height:200px; 
+}
 
 @media screen and (min-width: 768px){
   .App .logo{ 
@@ -380,6 +434,17 @@ button.menu{
   height:500px;
 }
 
+.bootstrapcard{
+  margin:20px; 
+}
+
+.About img{
+  width:70%; 
+}
+
+.About h1{
+  font-size:40px;
+}
 }
 
 @media screen and (min-width: 1024px){
@@ -428,6 +493,24 @@ button.menu{
   height:500px;
 }
 
+.offers{
+  margin:0 auto; 
+}
+.bootstrapcard{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:70%; 
+  text-align: center; 
+}
+.About h1{
+  font-size:40px;
+}
+
+.About img{
+  width:45%; 
+  height:220px; 
+}
 
 }
 @media screen and (min-width: 1440px){
@@ -461,6 +544,15 @@ button.menu{
 .parlour p{
   margin:10px; 
   margin-left:0%; 
+}
+
+.About h1{
+  font-size:40px;
+}
+
+.About img{
+  width:30%; 
+  height:230px; 
 }
 }
 

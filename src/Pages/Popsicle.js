@@ -4,6 +4,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown} from '@fortawesome/free-solid-svg-icons';
 
+
 const Popsicle = (props) => {
 const {popsicles} = props
     const loaded = () => (
