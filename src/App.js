@@ -10,6 +10,7 @@ import ItalianIce from "./Pages/ItalianIce";
 import Popsicle from "./Pages/Popsicle";
 import Button from "./Componets/Buttons";
 import Offers from "./Pages/Offers";
+import About from './Pages/About'
 import Footer from "./Componets/Footer";
 
 function App() {
@@ -105,7 +106,7 @@ const filterParlours = (filter) => {
         <Route exact path="/ice" render={() => <ItalianIce ices = {ice}/>}></Route>
         <Route exact path="/popsicles" render={() => <Popsicle popsicles = {popsicles}/>}></Route>
         <Route path="/offers" render={() =><Offers offers={offer}/> }></Route>
-        <Route path="/about"></Route>
+        <Route path="/about"><About/></Route>
         <Route path="/cart"></Route>
       </main>
       <Footer />
