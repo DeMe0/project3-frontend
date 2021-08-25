@@ -495,6 +495,13 @@ button.menu {
   margin: 0.5em auto;
 }
 
+.modal-body{
+  text-align:center;
+}
+.modal-header{
+  justify-content: center!important
+}
+
 @media screen and (min-width: 768px) {
   .App .logo {
     width: 60%;
