@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap');
 
 .App {
   text-align: center;
@@ -375,6 +376,27 @@ button.menu{
   height:200px; 
 }
 
+
+.namecard{
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-around;
+  padding:10px;  
+}
+
+.namecard img{
+  margin:0 auto; 
+  height:260px; 
+}
+
+.namecard .title{
+  color:black; 
+  font-family: 'Besley', serif;;
+}
+.namecard p{
+  color:black; 
+}
+
 @media screen and (min-width: 768px){
   .App .logo{ 
     width:60%; 
@@ -439,12 +461,20 @@ button.menu{
 }
 
 .About img{
-  width:70%; 
+  width:66%; 
 }
 
 .About h1{
   font-size:40px;
 }
+
+.namecard{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:66%; 
+}
+
 }
 
 @media screen and (min-width: 1024px){
@@ -512,6 +542,17 @@ button.menu{
   height:220px; 
 }
 
+.team{
+  display:flex;
+  justify-content:space-around;
+  margin:20px;  
+}
+
+.namecard img{
+  width:90%; 
+  height:280px; 
+}
+
 }
 @media screen and (min-width: 1440px){
   .App .logo{ 
@@ -553,6 +594,11 @@ button.menu{
 .About img{
   width:30%; 
   height:230px; 
+}
+
+.namecard img{
+  width:66%; 
+  height:290px; 
 }
 }
 
