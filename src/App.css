@@ -452,6 +452,29 @@ button.menu {
   margin-top: 8%;
   margin-bottom: 20%;
 }
+.cartContainer {
+  margin: 1em;
+  border: 1px white solid;
+  padding: 2rem;
+  background: #222;
+  color: white;
+}
+
+.cartBorderWrap {
+  max-width: 300px;
+  padding: 1rem;
+  position: relative;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    pink 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    pink 100%
+  );
+  padding: 3px;
+  margin: auto;
+}
 
 @media screen and (min-width: 768px) {
   .App .logo {
