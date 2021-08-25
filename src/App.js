@@ -10,6 +10,7 @@ import ItalianIce from "./Pages/ItalianIce";
 import Popsicle from "./Pages/Popsicle";
 import Button from "./Componets/Buttons";
 import Offers from "./Pages/Offers";
+import Cart from "./Pages/Cart";
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
@@ -66,6 +67,40 @@ function App() {
 
   useEffect(() => getOffers(), []);
 
+  const [cart, setCart] = useState([]);
+  const [fullInventory, setFullInventory] = useState([]);
+
+  const getFullInventory = async () => {
+    const response = await fetch(
+      "https://project3-icecream.herokuapp.com/fullinventory"
+    );
+    const data = await response.json();
+    console.log(data);
+    const productArr = data.map((item, index) => {
+      return {
+        price: item.price,
+        flavor: item.flavor,
+      };
+    });
+    setFullInventory(productArr);
+    console.log(productArr);
+  };
+  const addToCart = (product) => {
+    console.log("add to cart", product);
+    setCart([...cart, product]);
+  };
+
+  const removeFromCart = (product) => {
+    const index = cart.findIndex((thing) => product === thing);
+    const updatedArray = [...cart];
+    updatedArray.splice(index, 1);
+    setCart(updatedArray);
+  };
+
+  useEffect(() => {
+    getFullInventory();
+  }, []);
+
   return (
     <div className="App">
       <img
@@ -84,13 +119,42 @@ function App() {
         >
           <Button />
         </Route>
-        <Route exact path="/drinks" render={() => <Drink drinks = {drink}/>}></Route>
-        <Route exact path="/icecream" render={() => <IceCream icecreams = {icecreams}/>}></Route>
-        <Route exact path="/ice" render={() => <ItalianIce ices = {ice}/>}></Route>
-        <Route exact path="/popsicles" render={() => <Popsicle popsicles = {popsicles}/>}></Route>
-        <Route path="/offers" render={() =><Offers offers={offer}/> }></Route>
+        <Route
+          exact
+          path="/drinks"
+          render={() => <Drink drinks={drink} addToCart={addToCart} />}
+        ></Route>
+        <Route
+          exact
+          path="/icecream"
+          render={() => (
+            <IceCream icecreams={icecreams} addToCart={addToCart} cart={cart} />
+          )}
+        ></Route>
+        <Route
+          exact
+          path="/ice"
+          render={() => <ItalianIce ices={ice} addToCart={addToCart} />}
+        ></Route>
+        <Route
+          exact
+          path="/popsicles"
+          render={() => (
+            <Popsicle popsicles={popsicles} addToCart={addToCart} />
+          )}
+        ></Route>
+        <Route
+          path="/offers"
+          render={() => <Offers offers={offer} addToCart={addToCart} />}
+        ></Route>
         <Route path="/about"></Route>
-        <Route path="/cart"></Route>
+        <Route path="/cart">
+          <Cart
+            fullInventory={fullInventory}
+            cart={cart}
+            removeFromCart={removeFromCart}
+          />
+        </Route>
       </main>
       <Navigation />
     </div>

@@ -1,38 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
 
 .App {
   text-align: center;
   background-color: black;
-  background-size:cover;
-  height:100%;
+  background-size: cover;
+  height: 100%;
   width: 100%;
-  margin:0;
-  color:white;
+  margin: 0;
+  color: white;
 }
-.App .logo{
-  width:80%;
-  margin-top:-5%;
-  margin-bottom:-14%;
+.App .logo {
+  width: 80%;
+  margin-top: -5%;
+  margin-bottom: -14%;
 }
 
-.menubutton{
+.menubutton {
   display: flex;
   flex-direction: column;
 }
 
-
-button.menu{
-  color:white; 
+button.menu {
+  color: white;
   border: none;
   background-color: black;
   float: left;
 }
 
-.App .logo{ 
-  width:80%; 
-  margin-top:-5%; 
-  margin-bottom:-14%; 
+.App .logo {
+  width: 80%;
+  margin-top: -5%;
+  margin-bottom: -14%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -66,12 +65,12 @@ button.menu{
 
 /* navbar */
 .navbar {
-  border-bottom: solid 1px #EBEBEB;
+  border-bottom: solid 1px #ebebeb;
   background-color: black;
-  opacity:.8; 
+  opacity: 0.8;
 }
 .bottom-tab-nav {
-  border-top: solid 1px #EBEBEB;
+  border-top: solid 1px #ebebeb;
 }
 .nav-link,
 .bottom-nav-link {
@@ -84,378 +83,435 @@ button.menu{
   font-size: 12px;
 }
 
-.navicons{
+.navicons {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color:white; 
+  color: white;
   transition-property: color;
   transition-duration: 150ms;
 }
 
-.navicons:hover{
-  color:rgb(235, 94, 94); 
+.navicons:hover {
+  color: rgb(235, 94, 94);
 }
 
 /* dropdown */
-.main p{
+.main p {
   text-align: left;
   margin-left: 5%;
-  margin-top: -5%; 
+  margin-top: -5%;
 }
-.main .dropdown{
-  text-align:left; 
+.main .dropdown {
+  text-align: left;
   margin-left: 5%;
 }
 /* carousel */
-.main h2{
+.main h2 {
   background: pink;
-  background: -webkit-radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
-  background: -moz-radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
-  background: radial-gradient(circle farthest-corner at center center,pink 0%, #FFFF00 25%, #05C1FF 50%, #FFFF00 75%, pink 100%);
+  background: -webkit-radial-gradient(
+    circle farthest-corner at center center,
+    pink 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    pink 100%
+  );
+  background: -moz-radial-gradient(
+    circle farthest-corner at center center,
+    pink 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    pink 100%
+  );
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    pink 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    pink 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size:35px;
-  margin-top:15px; 
+  font-size: 35px;
+  margin-top: 15px;
 }
 
-.Carousel{
-  width:90%; 
-  margin:0 auto; 
+.Carousel {
+  width: 90%;
+  margin: 0 auto;
 }
 .carousel-item {
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
 
-.carousel-item img{
-   width:80%;
-   height:300px; 
-   margin:0 auto; 
+.carousel-item img {
+  width: 80%;
+  height: 300px;
+  margin: 0 auto;
 }
 
-.carousel-item .caption{
-   height:15%; 
-   /* text-align:center;  */
-   background-color: black;
-   color:white; 
-   background-size: cover;
-   opacity: 0.8; 
-   font-family: 'Lobster', cursive;
-   font-size:20px; 
+.carousel-item .caption {
+  height: 15%;
+  /* text-align:center;  */
+  background-color: black;
+  color: white;
+  background-size: cover;
+  opacity: 0.8;
+  font-family: "Lobster", cursive;
+  font-size: 20px;
 }
 
 /* parlours display */
-.main .subtitle{
-  text-align:left; 
-  margin-left:5%;
+.main .subtitle {
+  text-align: left;
+  margin-left: 5%;
   margin-top: 10px;
-  margin-bottom:25px;
+  margin-bottom: 25px;
 }
-.parlour{
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:space-around; 
-}
-
-.parlour img{
-  width:90%; 
-  height:250px;
+.parlour {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.parlour h1{
-  font-size:24px; 
-  text-align:left;
-  margin-left:5%; 
+.parlour img {
+  width: 90%;
+  height: 250px;
 }
 
-.parlour p{
-  margin:5px; 
-  margin-left:5%; 
+.parlour h1 {
+  font-size: 24px;
+  text-align: left;
+  margin-left: 5%;
 }
 
-.parlour .star{
-  color:lightcoral; 
+.parlour p {
+  margin: 5px;
+  margin-left: 5%;
+}
+
+.parlour .star {
+  color: lightcoral;
 }
 
 /* offers */
-.odisplay img{
+.odisplay img {
   width: 100px;
   height: 165px;
 }
 
 /* ice-cream */
-.icecream{
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:space-around; 
-   margin:10px; 
-   /* flex-direction: column; */
+.icecream {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
+  /* flex-direction: column; */
 }
 
-.icecream img{
-  width:100%; 
-  height:350px;
+.icecream img {
+  width: 100%;
+  height: 350px;
 }
 
-.icecream h1{
-  font-family: 'Sigmar One', cursive; 
+.icecream h1 {
+  font-family: "Sigmar One", cursive;
 }
 
-.icecream p{
-  font-size:24px; 
+.icecream p {
+  font-size: 24px;
 }
 
-.icecream .cart{
-  padding-left:8px;
-  transition-property:font-size;
+.icecream .cart {
+  padding-left: 8px;
+  transition-property: font-size;
   transition-duration: 50ms;
-  size: 25px; 
+  size: 25px;
 }
 
-.icecream .cart:hover{
-  font-size:30px;
+.icecream .cart:hover {
+  font-size: 30px;
 }
 
 /* popsicles */
 .popsicles {
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:space-around; 
-  margin:10px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
 }
 
-.popsicles img{
-  width:100%; 
-  height:350px;
+.popsicles img {
+  width: 100%;
+  height: 350px;
 }
 
-.popsicles h1{
-  font-family: 'Sigmar One', cursive; 
+.popsicles h1 {
+  font-family: "Sigmar One", cursive;
 }
 
-.popsicles p{
-  font-size:24px; 
+.popsicles p {
+  font-size: 24px;
 }
 
-.popsicles .cart{
-  padding-left:8px;
-  transition-property:font-size;
+.popsicles .cart {
+  padding-left: 8px;
+  transition-property: font-size;
   transition-duration: 50ms;
-  size: 25px; 
+  size: 25px;
 }
 
-.popsicles .cart:hover{
-  font-size:30px;
+.popsicles .cart:hover {
+  font-size: 30px;
 }
 
 /* drinks */
 .drinks {
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:space-around; 
-  margin:10px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
 }
 
-.drinks img{
-  width:100%; 
-  height:350px;
-};
+.drinks img {
+  width: 100%;
+  height: 350px;
+}
 
 .drinks h1 {
-  font-family: 'Sigmar One', cursive; 
+  font-family: "Sigmar One", cursive;
 }
 
-.drinks p{
-  font-size:24px; 
+.drinks p {
+  font-size: 24px;
 }
 
-.drinks .cart{
-  padding-left:8px;
-  transition-property:font-size;
+.drinks .cart {
+  padding-left: 8px;
+  transition-property: font-size;
   transition-duration: 50ms;
-  size: 25px; 
+  size: 25px;
 }
 
-.drinks .cart:hover{
-  font-size:30px;
+.drinks .cart:hover {
+  font-size: 30px;
 }
 
 /* italianices */
 
 .italianices {
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:space-around; 
-  margin:10px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px;
 }
 
-.italianices img{
-  width:100%; 
-  height:300px;
+.italianices img {
+  width: 100%;
+  height: 300px;
 }
 
-.italianices h1{
-  font-family: 'Sigmar One', cursive; 
-  font-size: 35px; 
+.italianices h1 {
+  font-family: "Sigmar One", cursive;
+  font-size: 35px;
 }
 
-.italianices p{
-  font-size:24px; 
+.italianices p {
+  font-size: 24px;
 }
 
-.italianices .cart{
-  padding-left:8px;
-  transition-property:font-size;
+.italianices .cart {
+  padding-left: 8px;
+  transition-property: font-size;
   transition-duration: 50ms;
-  size: 25px; 
+  size: 25px;
 }
 
-.italianices .cart:hover{
-  font-size:30px;
+.italianices .cart:hover {
+  font-size: 30px;
 }
 
+/* cart */
+.cartLine {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px white;
+  text-align: left;
+}
 
-@media screen and (min-width: 768px){
-  .App .logo{ 
-    width:60%; 
-    margin-top:-10%; 
-    margin-bottom:-15%; 
-  };
+.cartLine p {
+  font-size: 0.7em;
+}
 
-  .Carousel{
-    width:100%; 
+.cartContainer {
+  margin: 1em;
+  border: 1px white solid;
+  padding: 2rem;
+  background: #222;
+  color: white;
+}
+
+.cartBorderWrap {
+  max-width: 300px;
+  padding: 1rem;
+  position: relative;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    pink 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    pink 100%
+  );
+  padding: 3px;
+  margin: auto;
+}
+
+/* 
+.module {
+  background: #222;
+  color: white;
+} */
+
+@media screen and (min-width: 768px) {
+  .App .logo {
+    width: 60%;
+    margin-top: -10%;
+    margin-bottom: -15%;
   }
 
- .carousel-item img{
-  width:60%;  
-  height:350px; 
-  margin:0 auto; 
-} 
-
- .parlour img{
-  width:600px; 
-  height:430px;
-  margin:0 auto; 
-}
-
-.parlour h1{
-  margin:5px; 
-  font-size:24px; 
-  text-align:left;
-  margin-left:0%; 
-}
-
-.parlour p{
-  margin:5px; 
-  margin-left:0%; 
-}
-
-.button menu{
-  margin-bottom: 20%;
+  .Carousel {
+    width: 100%;
   }
 
-.icecream img{
-  width:600px; 
-  height:500px;
-}
-
-.popsicles img{
-  width:600px; 
-  height:500px;
-}
-
-.drinks img{
-  width:600px; 
-  height:550px;
-}
-
-.italianices img{
-  width:600px; 
-  height:500px;
-}
-
-}
-
-@media screen and (min-width: 1024px){
-  .App .logo{ 
-    width:42%; 
-    margin-top:-10%; 
-    margin-bottom:-14%; 
+  .carousel-item img {
+    width: 60%;
+    height: 350px;
+    margin: 0 auto;
   }
 
-  .Carousel{
-    width:90%; 
-    margin:0 auto; 
+  .parlour img {
+    width: 600px;
+    height: 430px;
+    margin: 0 auto;
   }
 
-  .carousel-item img{
-    width:50%;
-    height:450px; 
-    margin:0 auto; 
- }
-
- .parlour img{
-  width:550px; 
-  height:420px;
-  margin:0 auto; 
-}
-.parlour h1{
-  margin:5px; 
-  font-size:24px; 
-  text-align:left;
-  margin-left:0%; 
-}
-
-.parlour p{
-  margin:7px; 
-  margin-left:0%; 
-}
-
-
-.popsicles img{
-  width:600px; 
-  height:550px;
-}
-
-.italianices img{
-  width:550px; 
-  height:500px;
-}
-
-
-}
-@media screen and (min-width: 1440px){
-  .App .logo{ 
-    width:33%; 
-    margin-top:-9%; 
-    margin-bottom:-10%; 
+  .parlour h1 {
+    margin: 5px;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0%;
   }
-  .Carousel{
-    width:70%; 
-    margin:0 auto; 
+
+  .parlour p {
+    margin: 5px;
+    margin-left: 0%;
   }
-  .carousel-item img{
-    width:40%;
-    height:430px; 
-    margin:0 auto; 
- }
- .parlour img{
-  width:700px; 
-  height:500px;
-  margin:0 auto; 
+
+  .button menu {
+    margin-bottom: 20%;
+  }
+
+  .icecream img {
+    width: 600px;
+    height: 500px;
+  }
+
+  .popsicles img {
+    width: 600px;
+    height: 500px;
+  }
+
+  .drinks img {
+    width: 600px;
+    height: 550px;
+  }
+
+  .italianices img {
+    width: 600px;
+    height: 500px;
+  }
 }
 
-.parlour h1{
-  margin:5px; 
-  font-size:24px; 
-  text-align:left;
-  margin-left:0%; 
-}
+@media screen and (min-width: 1024px) {
+  .App .logo {
+    width: 42%;
+    margin-top: -10%;
+    margin-bottom: -14%;
+  }
 
-.parlour p{
-  margin:10px; 
-  margin-left:0%; 
-}
-}
+  .Carousel {
+    width: 90%;
+    margin: 0 auto;
+  }
 
+  .carousel-item img {
+    width: 50%;
+    height: 450px;
+    margin: 0 auto;
+  }
+
+  .parlour img {
+    width: 550px;
+    height: 420px;
+    margin: 0 auto;
+  }
+  .parlour h1 {
+    margin: 5px;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0%;
+  }
+
+  .parlour p {
+    margin: 7px;
+    margin-left: 0%;
+  }
+
+  .popsicles img {
+    width: 600px;
+    height: 550px;
+  }
+
+  .italianices img {
+    width: 550px;
+    height: 500px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .App .logo {
+    width: 33%;
+    margin-top: -9%;
+    margin-bottom: -10%;
+  }
+  .Carousel {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .carousel-item img {
+    width: 40%;
+    height: 430px;
+    margin: 0 auto;
+  }
+  .parlour img {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .parlour h1 {
+    margin: 5px;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0%;
+  }
+
+  .parlour p {
+    margin: 10px;
+    margin-left: 0%;
+  }
+}
