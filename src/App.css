@@ -455,7 +455,7 @@ button.menu {
 .cartContainer {
   margin: 1em;
   border: 1px white solid;
-  padding: 2rem;
+  padding: 20px;
   background: #222;
   color: white;
 }
@@ -474,6 +474,25 @@ button.menu {
   );
   padding: 3px;
   margin: auto;
+}
+
+/* .mycart h3 {
+  text-align: left !important;
+  margin: 0 28%;
+} */
+
+.cartColumnNames {
+  display: flex;
+  justify-content: space-between;
+}
+
+.separator {
+  width: 75%;
+  position: relative;
+  justify-self: center;
+  height: 1px;
+  background-color: white;
+  margin: 0.5em auto;
 }
 
 @media screen and (min-width: 768px) {
