@@ -7,12 +7,12 @@ import Popsicle from './Popsicle';
 import Button from '../Componets/Buttons'
 import Card from '../Componets/Card'
 import BootstrapCard from '../Componets/Card';
-
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Menu = (props) => {
     return(
         <div className="cards">
-            <Button />
+           
          <BootstrapCard/>
           
           </div>
