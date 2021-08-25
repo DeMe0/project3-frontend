@@ -11,16 +11,33 @@ import Popsicle from "./Pages/Popsicle";
 import Button from "./Componets/Buttons";
 import Offers from "./Pages/Offers";
 import Cart from "./Pages/Cart";
+import About from "./Pages/About";
+import Footer from "./Componets/Footer";
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
   const [parlours, setParlours] = useState([]);
+  const [originalParlours, setOriginalParlours] = useState([]);
+
   const getParlours = () => {
     fetch(url + "/parlours")
       .then((response) => response.json())
-      .then((data) => setParlours(data));
+      .then((data) => {
+        setOriginalParlours(data);
+        setParlours(data);
+      });
   };
   useEffect(() => getParlours(), []);
+
+  const filterParlours = (filter) => {
+    console.log(originalParlours);
+    let newState = originalParlours.filter((item) => {
+      console.log(item.city, filter);
+      return item.city === filter;
+    });
+
+    setParlours(newState);
+  };
 
   const [icecreams, setIcecreams] = useState([]);
   const getIcecreams = () => {
@@ -111,14 +128,14 @@ function App() {
         <Route
           exact
           path="/"
-          render={(rp) => <Main {...rp} parlours={parlours} />}
+          render={(rp) => (
+            <Main {...rp} parlours={parlours} filterParlours={filterParlours} />
+          )}
         />
         <Route
           path="/menu"
           render={(rp) => <Menu {...rp} parlours={parlours} />}
-        >
-          <Button />
-        </Route>
+        ></Route>
         <Route
           exact
           path="/drinks"
@@ -156,6 +173,7 @@ function App() {
           />
         </Route>
       </main>
+      <Footer />
       <Navigation />
     </div>
   );

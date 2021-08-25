@@ -1,32 +1,30 @@
-import { Link } from 'react-router-dom'
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import React from 'react';
+// import { Link } from 'react-router-dom'
+// import { AiOutlineArrowLeft } from "react-icons/ai";
+import {Card, CardImg, CardText, CardBody,CardTitle} from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Offers = (props) => {
     const {offers} = props
-    // console.log(icecreams)
     const loaded = () => (
-        <div className="offers" >
-              <Link to ='/menu'>
-                <button className ='menu'>
-                <AiOutlineArrowLeft />
-                </button>
-                 </Link>
-          
-        {offers.map((offer) => (
-            
-            
+       <div className="offers" > 
+        {offers.map((offer) => ( 
            <article className = 'odisplay'>
-            
-             <h1>{offer.title}</h1>
-             <img src={offer.img} />
-             <p>{offer.description}</p>
-             
-            
+            <Card className="bootstrapcard" >
+             <CardImg top width="100%" src={offer.img} alt="Card image cap" />
+             <CardBody>
+             <CardTitle className="title" tag="h5">{offer.title}</CardTitle>   
+             <CardText>{offer.description}
+               </CardText>
+               <CardText><button>Apply Coupon</button>
+               </CardText>
+             </CardBody>
+             </Card>
           </article>
        ))}
-     </div>
-           )
-       
+     </div> )
+
+    
            const loading = <h1>Loading...</h1>
            return offers.length > 0 ? loaded() : loading;
 }
