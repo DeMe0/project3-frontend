@@ -164,7 +164,7 @@ function App() {
           path="/offers"
           render={() => <Offers offers={offer} addToCart={addToCart} />}
         ></Route>
-        <Route path="/about"></Route>
+        <Route path="/about"><About /></Route>
         <Route path="/cart">
           <Cart
             fullInventory={fullInventory}
