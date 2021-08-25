@@ -14,7 +14,6 @@ const Menu = (props) => {
         <div className="cards">
             <Button />
          <BootstrapCard/>
-          
           </div>
        )
 }
