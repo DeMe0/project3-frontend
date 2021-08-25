@@ -23,7 +23,8 @@ const Offers = (props) => {
           </article>
        ))}
      </div> )
-       
+
+    
            const loading = <h1>Loading...</h1>
            return offers.length > 0 ? loaded() : loading;
 }
