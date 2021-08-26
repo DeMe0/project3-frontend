@@ -3,6 +3,8 @@ import Items from "../Componets/Items";
 import { Route, Link, Switch } from "react-router-dom";
 import Checkout from "./Checkout";
 
+import RemoveFromCartButton from "../Componets/RemoveFromCartButton";
+
 const Cart = (props) => {
   const loaded = () => (
     <div className="mycart">
@@ -18,6 +20,7 @@ const Cart = (props) => {
           {props.cart.map((item) => {
             return (
               <div className="cartLine">
+                <RemoveFromCartButton removeFromCart={props.removeFromCart} />
                 <p>{item.flavor}</p>
                 <p>${item.price}</p>
               </div>
@@ -30,7 +33,7 @@ const Cart = (props) => {
               $
               {props.cart
                 .map((price) => price.price)
-                .reduce((acc, price) => price + acc)}
+                .reduce((acc, price) => +(price + acc).toFixed(2))}
             </h3>
           </div>
         </div>

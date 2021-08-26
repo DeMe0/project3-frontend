@@ -5,7 +5,7 @@ import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 const AddToCartButton = (props) => {
   return (
     <button
-      className="button"
+      className="addToCartButton"
       onClick={() => {
         props.addToCart(props.product);
       }}

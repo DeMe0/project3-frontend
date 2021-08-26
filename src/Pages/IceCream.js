@@ -16,12 +16,14 @@ const IceCream = (props, index) => {
         </button>
       </Link>
       {icecreams.map((icecream) => (
-        <article>
+        <article className="productCard">
           <img src={icecream.img} />
           <h1>{icecream.brand}</h1>
           <p>{icecream.flavor}</p>
-          <p className="price"> $ {icecream.price} </p>
-          <AddToCartButton addToCart={props.addToCart} product={icecream} />
+          <div className="priceLine">
+            <p className="price"> $ {icecream.price} </p>
+            <AddToCartButton addToCart={props.addToCart} product={icecream} />
+          </div>
         </article>
       ))}
     </div>
