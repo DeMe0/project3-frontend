@@ -13,12 +13,13 @@ import Offers from "./Pages/Offers";
 import Cart from "./Pages/Cart";
 import About from "./Pages/About";
 import Footer from "./Componets/Footer";
-import Checkout from './Pages/Checkout'
+import Checkout from "./Pages/Checkout";
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
   const [parlours, setParlours] = useState([]);
   const [originalParlours, setOriginalParlours] = useState([]);
+  const [discountApplied, SetDiscountApplied] = useState(false);
 
   const getParlours = () => {
     fetch(url + "/parlours")
@@ -163,9 +164,18 @@ function App() {
         ></Route>
         <Route
           path="/offers"
-          render={() => <Offers offers={offer} addToCart={addToCart} />}
+          render={() => (
+            <Offers
+              offers={offer}
+              addToCart={addToCart}
+              discountApplied={discountApplied}
+              SetDiscountApplied={SetDiscountApplied}
+            />
+          )}
         ></Route>
-        <Route path="/about"><About /></Route>
+        <Route path="/about">
+          <About />
+        </Route>
         <Route path="/cart">
           <Cart
             fullInventory={fullInventory}
@@ -173,7 +183,7 @@ function App() {
             removeFromCart={removeFromCart}
           />
         </Route>
-        <Route exact path ='/checkout'>
+        <Route exact path="/checkout">
           <Checkout />
         </Route>
       </main>

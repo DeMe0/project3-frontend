@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import { Link } from 'react-router-dom'
 // import { AiOutlineArrowLeft } from "react-icons/ai";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
@@ -19,7 +19,17 @@ const Offers = (props) => {
               </CardTitle>
               <CardText>{offer.description}</CardText>
               <CardText>
-                <AddToCartButton addToCart={props.addToCart} product={offer} />
+                <AddToCartButton
+                  addToCart={(product) => {
+                    if (props.discountApplied) {
+                    } else {
+                      props.addToCart(product);
+                      props.SetDiscountApplied(true);
+                    }
+                  }}
+                  product={offer}
+                  discountApplied={props.discountApplied}
+                />
               </CardText>
             </CardBody>
           </Card>
