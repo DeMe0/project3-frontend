@@ -187,8 +187,9 @@ function App() {
           <Checkout />
         </Route>
       </main>
-      <Footer />
       <Navigation />
+      <Footer />
+      
     </div>
   );
 }
