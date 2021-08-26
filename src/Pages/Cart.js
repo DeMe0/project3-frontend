@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Items from "../Componets/Items";
+import RemoveFromCartButton from "../Componets/RemoveFromCartButton";
 
 const Cart = (props) => {
   const loaded = () => (
@@ -16,6 +17,7 @@ const Cart = (props) => {
           {props.cart.map((item) => {
             return (
               <div className="cartLine">
+                <RemoveFromCartButton removeFromCart={props.removeFromCart} />
                 <p>{item.flavor}</p>
                 <p>${item.price}</p>
               </div>
@@ -28,7 +30,7 @@ const Cart = (props) => {
               $
               {props.cart
                 .map((price) => price.price)
-                .reduce((acc, price) => price + acc)}
+                .reduce((acc, price) => +(price + acc).toFixed(2))}
             </h3>
           </div>
         </div>
