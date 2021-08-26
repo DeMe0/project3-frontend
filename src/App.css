@@ -257,7 +257,7 @@ button.menu {
 
 .parlour img {
   width: 90%;
-  height: 250px;
+  /* height: 250px; */
 }
 
 .parlour h1 {
@@ -956,7 +956,7 @@ button#checkoutbutton {
     margin: 0 auto;
   }
   .parlour img {
-    width: 700px;
+    /* width: 49%; */
     height: 500px;
     margin: 0 auto;
   }
