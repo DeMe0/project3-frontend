@@ -6,10 +6,13 @@ import {
     CarouselIndicators,
     CarouselCaption
   } from 'reactstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const items = [
+
+
+const Selection = (props) => {
+  const items = [
     {
       src: 'https://www.theflavorbender.com/wp-content/uploads/2020/07/Ube-Ice-Cream-SM-8065.jpg',
       altText: 'Ube Ice Cream',
@@ -35,8 +38,6 @@ const items = [
         header: 'Bunny Tracks',
       }
   ];
-
-const Selection = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
   
