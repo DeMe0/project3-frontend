@@ -12,6 +12,13 @@
   margin: 0;
   color: white;
 }
+
+body {
+  height: 100%
+}
+#root{
+  height: 100%
+}
 .App .logo {
   width: 80%;
   margin-top: -5%;
@@ -189,10 +196,7 @@ button.menu {
   width: 90%;
   margin: 0 auto;
 }
-.carousel-item {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .carousel-item img {
   width: 80%;
@@ -575,6 +579,11 @@ button.menu {
 .namecard p{
   color:black; 
 }
+h1.Footer {
+  margin-top: 8%;
+  margin-bottom: 20%;
+  position: relative;
+}
 
 .modal-body{
   text-align:center;
@@ -605,10 +614,6 @@ button#checkoutbutton{
     width:100%; 
   }
 /* Footer */
-.Footer {
-  margin-top: 8%;
-  margin-bottom: 20%;
-}
 
 @media screen and (min-width: 768px) {
   .App .logo {
