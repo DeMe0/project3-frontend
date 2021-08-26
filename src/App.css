@@ -188,10 +188,7 @@ button.menu {
   width: 90%;
   margin: 0 auto;
 }
-.carousel-item {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .carousel-item img {
   width: 80%;
