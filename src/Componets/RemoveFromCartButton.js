@@ -1,18 +1,19 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaTrashAlt } from "react-icons/fa";
 import { faCartArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-const AddToCartButton = (props) => {
+const RemoveFromCartButton = (props) => {
   return (
     <button
-      className="addToCartButton"
+      className="removeFromCartButton"
       onClick={() => {
-        props.addToCart(props.product);
+        props.removeFromCart(props.product);
       }}
     >
-      <FontAwesomeIcon className="cart" icon={faCartArrowDown} />
+      <FaTrashAlt id="trashIcon" />
     </button>
   );
 };
 
-export default AddToCartButton;
+export default RemoveFromCartButton;

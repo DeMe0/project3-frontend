@@ -3,21 +3,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
+html {
+  min-height: 100%; /* make sure it is at least as tall as the viewport */
+  position: relative;
+}
+html,
+body {
+  overflow: auto;
+}
+
 .App {
   text-align: center;
   background-color: black;
   background-size: cover;
-  height: 100%;
+
   width: 100%;
   margin: 0;
   color: white;
 }
 
 body {
-  height: 100%;
+  height: 1024px;
+  background-color: black !important;
+  background-size: cover !important;
 }
 #root {
-  height: 100%;
+  height: 1024px;
 }
 .App .logo {
   width: 80%;
@@ -627,10 +638,10 @@ button.menu {
 .namecard p {
   color: black;
 }
-h1.Footer {
+h4.Footer {
   margin-top: 8%;
   margin-bottom: 20%;
-  position: relative;
+  position: fixed;
 }
 
 .modal-body {
@@ -652,155 +663,141 @@ button#checkoutbutton {
   .App .logo {
     width: 60%;
     margin-top: -10%;
+    padding-bottom: -15%;
+  }
+
+  .footer {
+    margin: 10px;
+    opacity: 0.8;
+    padding-bottom: 9%;
+  }
+
+  .Carousel {
+    width: 100%;
+  }
+
+  .carousel-item img {
+    width: 60%;
+    height: 350px;
+    margin: 0 auto;
+  }
+  .parlour img {
+    width: 600px;
+    height: 430px;
+    margin: 0 auto;
+  }
+
+  .cartLine p {
+    font-size: 0.7em;
+  }
+
+  .cartContainer {
+    margin: 1em;
+    border: 1px white solid;
+    padding: 2rem;
+    background: #222;
+    color: white;
+  }
+
+  .About img {
+    width: 66%;
+  }
+
+  .About h1 {
+    font-size: 40px;
+  }
+
+  .namecard {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
+  }
+}
+.cartBorderWrap {
+  max-width: 300px;
+  padding: 1rem;
+  position: relative;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    pink 0%,
+    #ffff00 25%,
+    #05c1ff 50%,
+    #ffff00 75%,
+    pink 100%
+  );
+  padding: 3px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .App .logo {
+    width: 60%;
+    margin-top: -10%;
     margin-bottom: -15%;
   }
 
   .Carousel {
     width: 100%;
   }
-  /* Footer */
 
-  @media screen and (min-width: 768px) {
-    .App .logo {
-      width: 60%;
-      margin-top: -10%;
-      padding-bottom: -15%;
-    }
-
-    .footer {
-      margin: 10px;
-      opacity: 0.8;
-      padding-bottom: 9%;
-    }
-
-    .Carousel {
-      width: 100%;
-    }
-
-    .carousel-item img {
-      width: 60%;
-      height: 350px;
-      margin: 0 auto;
-    }
-
-    .parlour img {
-      width: 600px;
-      height: 430px;
-      margin: 0 auto;
-    }
-
-    .cartLine p {
-      font-size: 0.7em;
-    }
-
-    .cartContainer {
-      margin: 1em;
-      border: 1px white solid;
-      padding: 2rem;
-      background: #222;
-      color: white;
-    }
-
-    .About img {
-      width: 66%;
-    }
-
-    .About h1 {
-      font-size: 40px;
-    }
-
-    .namecard {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 66%;
-    }
-  }
-  .cartBorderWrap {
-    max-width: 300px;
-    padding: 1rem;
-    position: relative;
-    background: radial-gradient(
-      circle farthest-corner at center center,
-      pink 0%,
-      #ffff00 25%,
-      #05c1ff 50%,
-      #ffff00 75%,
-      pink 100%
-    );
-    padding: 3px;
-    margin: auto;
+  .carousel-item img {
+    width: 60%;
+    height: 350px;
+    margin: 0 auto;
   }
 
-  @media screen and (min-width: 768px) {
-    .App .logo {
-      width: 60%;
-      margin-top: -10%;
-      margin-bottom: -15%;
-    }
+  .parlour img {
+    width: 600px;
+    height: 430px;
+    margin: 0 auto;
+  }
 
-    .Carousel {
-      width: 100%;
-    }
+  .parlour h1 {
+    margin: 5px;
+    font-size: 24px;
+    text-align: left;
+    margin-left: 0%;
+  }
 
-    .carousel-item img {
-      width: 60%;
-      height: 350px;
-      margin: 0 auto;
-    }
+  .parlour p {
+    margin: 5px;
+    margin-left: 0%;
+  }
+  .icecream img {
+    width: 600px;
+    height: 500px;
+    margin-top: 10%;
+  }
 
-    .parlour img {
-      width: 600px;
-      height: 430px;
-      margin: 0 auto;
-    }
+  .popsicles img {
+    width: 600px;
+    height: 500px;
+    margin-top: 10%;
+  }
 
-    .parlour h1 {
-      margin: 5px;
-      font-size: 24px;
-      text-align: left;
-      margin-left: 0%;
-    }
+  .drinks img {
+    width: 600px;
+    height: 550px;
+    margin-top: 10%;
+  }
 
-    .parlour p {
-      margin: 5px;
-      margin-left: 0%;
-    }
-    .icecream img {
-      width: 600px;
-      height: 500px;
-      margin-top: 10%;
-    }
+  .italianices img {
+    width: 600px;
+    height: 500px;
+    margin-top: 10%;
+  }
 
-    .popsicles img {
-      width: 600px;
-      height: 500px;
-      margin-top: 10%;
-    }
+  .bootstrapcard {
+    margin: 20px;
+  }
 
-    .drinks img {
-      width: 600px;
-      height: 550px;
-      margin-top: 10%;
-    }
+  .About img {
+    width: 70%;
+  }
 
-    .italianices img {
-      width: 600px;
-      height: 500px;
-      margin-top: 10%;
-    }
-
-    .bootstrapcard {
-      margin: 20px;
-    }
-
-    .About img {
-      width: 70%;
-    }
-
-    .About h1 {
-      font-size: 40px;
-    }
+  .About h1 {
+    font-size: 40px;
   }
 
   .button menu {
@@ -825,6 +822,12 @@ button#checkoutbutton {
   .italianices img {
     width: 600px;
     height: 500px;
+  }
+  .Footer {
+    /* margin-top: 50%;
+    margin-bottom: -20%; */
+    margin: 50% !important;
+    position: fixed;
   }
 }
 
@@ -938,8 +941,6 @@ button#checkoutbutton {
     width: 550px;
     height: 500px;
   }
-}
-@media screen and (min-width: 1440px) {
   .App .logo {
     width: 33%;
     margin-top: -9%;

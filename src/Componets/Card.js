@@ -31,8 +31,8 @@ const BootstrapCard = () => {
             </Col>
             <Col>
               <Card.Body>
-              <Card.Title as="h1">Ice Cream Drinks</Card.Title>
-              <Card.Text as="h4" style={styles.cardText}>
+              <Card.Title className="name" as="h1">Ice Cream Drinks</Card.Title>
+              <Card.Text as="h4" className="item" style={styles.cardText}>
                11 items
               </Card.Text>
               </Card.Body>
@@ -52,8 +52,8 @@ const BootstrapCard = () => {
             </Col>
             <Col>
               <Card.Body>
-              <Card.Title as="h1">Ice-Cream</Card.Title>
-              <Card.Text as="h4" style={styles.cardText}>
+              <Card.Title className="name" as="h1">Ice-Cream</Card.Title>
+              <Card.Text as="h4" className="item" style={styles.cardText}>
                17 items
               </Card.Text>
               </Card.Body>
@@ -72,8 +72,8 @@ const BootstrapCard = () => {
             </Col>
             <Col>
               <Card.Body>
-              <Card.Title as="h1">Italian Ice</Card.Title>
-              <Card.Text as="h4" style={styles.cardText}>
+              <Card.Title className="name" as="h1">Italian Ice</Card.Title>
+              <Card.Text as="h4" className="item" style={styles.cardText}>
                18 items
               </Card.Text>
               </Card.Body>
@@ -92,8 +92,8 @@ const BootstrapCard = () => {
             </Col>
             <Col>
               <Card.Body>
-              <Card.Title as="h1">Popsicles</Card.Title>
-              <Card.Text as="h4" style={styles.cardText}>
+              <Card.Title className="name"as="h1">Popsicles</Card.Title>
+              <Card.Text className="item" as="h4" style={styles.cardText}>
                17 items
               </Card.Text>
               </Card.Body>
@@ -107,6 +107,7 @@ const BootstrapCard = () => {
         </Link>
       </CardGroup>
     </Container> 
+    
         </div>
     )
 }
