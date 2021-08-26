@@ -20,8 +20,10 @@ const Cart = (props) => {
           {props.cart.map((item) => {
             return (
               <div className="cartLine">
-                <RemoveFromCartButton removeFromCart={props.removeFromCart} />
-                <p>{item.flavor}</p>
+                <p>
+                  {item.flavor}
+                  <RemoveFromCartButton removeFromCart={props.removeFromCart} />
+                </p>
                 <p>${item.price}</p>
               </div>
             );
@@ -38,6 +40,7 @@ const Cart = (props) => {
           </div>
         </div>
       </div>
+      <Checkout />
     </div>
   );
   const loading = (
@@ -49,7 +52,7 @@ const Cart = (props) => {
         </div>
       </div>
       <div className="separator"></div>
-     <Checkout />
+      <Checkout />
     </div>
   );
   return props.cart.length > 0 ? loaded() : loading;

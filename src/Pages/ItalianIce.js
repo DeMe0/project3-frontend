@@ -16,12 +16,14 @@ const ItalianIce = (props, index) => {
         </button>
       </Link>
       {ices.map((ice) => (
-        <article>
+        <article className="productCard">
           <img src={ice.img} />
           <h1>{ice.brand}</h1>
           <p>{ice.flavor}</p>
-          <p>$ {ice.price}</p>
-          <AddToCartButton addToCart={props.addToCart} product={ice} />
+          <div className="priceLine">
+            <p className="price">$ {ice.price}</p>
+            <AddToCartButton addToCart={props.addToCart} product={ice} />
+          </div>
         </article>
       ))}
     </div>

@@ -15,12 +15,14 @@ const Drink = (props) => {
         </button>
       </Link>
       {drinks.map((drink) => (
-        <article>
+        <article className="productCard">
           <img src={drink.img} />
           <h1>{drink.brand}</h1>
           <p>{drink.flavor}</p>
-          <p> $ {drink.price}</p>
-          <AddToCartButton addToCart={props.addToCart} product={drink} />
+          <div className="priceLine">
+            <p className="price"> $ {drink.price}</p>
+            <AddToCartButton addToCart={props.addToCart} product={drink} />
+          </div>
         </article>
       ))}
     </div>
