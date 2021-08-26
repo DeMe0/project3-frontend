@@ -112,6 +112,9 @@ button.menu {
   text-align: left !important;
   margin: 0 28%;
 } */
+.mycart{
+  margin-bottom: 50%;
+}
 
 .cartColumnNames {
   display: flex;
@@ -500,7 +503,8 @@ button.menu {
   /* margin:10px;  */
   /* margin-top: 35%;
   opacity:0.8;  */
-
+  position: relative;
+  bottom: 0;
 }
 
 .footer hr{
@@ -786,7 +790,7 @@ button#checkoutbutton{
   .Footer {
     /* margin-top: 50%;
     margin-bottom: -20%; */
-    margin: 50%!important;
+    margin: 50%;
     position: fixed;
   }
 }
