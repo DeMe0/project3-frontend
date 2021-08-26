@@ -10,33 +10,35 @@ import ItalianIce from "./Pages/ItalianIce";
 import Popsicle from "./Pages/Popsicle";
 import Button from "./Componets/Buttons";
 import Offers from "./Pages/Offers";
-import About from './Pages/About'
+import Cart from "./Pages/Cart";
+import About from "./Pages/About";
+import Footer from "./Componets/Footer";
+import Checkout from './Pages/Checkout'
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
   const [parlours, setParlours] = useState([]);
-  const [originalParlours, setOriginalParlours] = useState([])
-  
+  const [originalParlours, setOriginalParlours] = useState([]);
 
   const getParlours = () => {
     fetch(url + "/parlours")
       .then((response) => response.json())
-      .then((data) =>{
-         setOriginalParlours(data)
-         setParlours(data)});
+      .then((data) => {
+        setOriginalParlours(data);
+        setParlours(data);
+      });
   };
   useEffect(() => getParlours(), []);
 
-const filterParlours = (filter) => {
-  console.log(originalParlours)
-    let newState = originalParlours.filter((item) =>{
-      console.log(item.city, filter)
-      return item.city === filter
-      
-    })
-    
-    setParlours(newState)
-}
+  const filterParlours = (filter) => {
+    console.log(originalParlours);
+    let newState = originalParlours.filter((item) => {
+      console.log(item.city, filter);
+      return item.city === filter;
+    });
+
+    setParlours(newState);
+  };
 
   const [icecreams, setIcecreams] = useState([]);
   const getIcecreams = () => {
@@ -83,6 +85,40 @@ const filterParlours = (filter) => {
 
   useEffect(() => getOffers(), []);
 
+  const [cart, setCart] = useState([]);
+  const [fullInventory, setFullInventory] = useState([]);
+
+  const getFullInventory = async () => {
+    const response = await fetch(
+      "https://project3-icecream.herokuapp.com/fullinventory"
+    );
+    const data = await response.json();
+    console.log(data);
+    const productArr = data.map((item, index) => {
+      return {
+        price: item.price,
+        flavor: item.flavor,
+      };
+    });
+    setFullInventory(productArr);
+    console.log(productArr);
+  };
+  const addToCart = (product) => {
+    console.log("add to cart", product);
+    setCart([...cart, product]);
+  };
+
+  const removeFromCart = (product) => {
+    const index = cart.findIndex((thing) => product === thing);
+    const updatedArray = [...cart];
+    updatedArray.splice(index, 1);
+    setCart(updatedArray);
+  };
+
+  useEffect(() => {
+    getFullInventory();
+  }, []);
+
   return (
     <div className="App">
       <img
@@ -93,21 +129,55 @@ const filterParlours = (filter) => {
         <Route
           exact
           path="/"
-          render={(rp) => <Main {...rp} parlours={parlours} filterParlours = {filterParlours}/>}
+          render={(rp) => (
+            <Main {...rp} parlours={parlours} filterParlours={filterParlours} />
+          )}
         />
         <Route
           path="/menu"
           render={(rp) => <Menu {...rp} parlours={parlours} />}
-        >
+        ></Route>
+        <Route
+          exact
+          path="/drinks"
+          render={() => <Drink drinks={drink} addToCart={addToCart} />}
+        ></Route>
+        <Route
+          exact
+          path="/icecream"
+          render={() => (
+            <IceCream icecreams={icecreams} addToCart={addToCart} cart={cart} />
+          )}
+        ></Route>
+        <Route
+          exact
+          path="/ice"
+          render={() => <ItalianIce ices={ice} addToCart={addToCart} />}
+        ></Route>
+        <Route
+          exact
+          path="/popsicles"
+          render={() => (
+            <Popsicle popsicles={popsicles} addToCart={addToCart} />
+          )}
+        ></Route>
+        <Route
+          path="/offers"
+          render={() => <Offers offers={offer} addToCart={addToCart} />}
+        ></Route>
+        <Route path="/about"><About /></Route>
+        <Route path="/cart">
+          <Cart
+            fullInventory={fullInventory}
+            cart={cart}
+            removeFromCart={removeFromCart}
+          />
         </Route>
-        <Route exact path="/drinks" render={() => <Drink drinks = {drink}/>}></Route>
-        <Route exact path="/icecream" render={() => <IceCream icecreams = {icecreams}/>}></Route>
-        <Route exact path="/ice" render={() => <ItalianIce ices = {ice}/>}></Route>
-        <Route exact path="/popsicles" render={() => <Popsicle popsicles = {popsicles}/>}></Route>
-        <Route path="/offers" render={() =><Offers offers={offer}/> }></Route>
-        <Route path="/about"><About/></Route>
-        <Route path="/cart"></Route>
+        <Route exact path ='/checkout'>
+          <Checkout />
+        </Route>
       </main>
+      <Footer />
       <Navigation />
     </div>
   );
