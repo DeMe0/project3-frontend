@@ -15,12 +15,14 @@ const Popsicle = (props) => {
         </button>
       </Link>
       {popsicles.map((popsicle) => (
-        <article>
+        <article className="productCard">
           <img src={popsicle.img} />
           <h1>{popsicle.brand}</h1>
           <p>{popsicle.flavor}</p>
-          <p>$ {popsicle.price}</p>
-          <AddToCartButton addToCart={props.addToCart} product={popsicle} />
+          <div className="priceLine">
+            <p className="price">$ {popsicle.price}</p>
+            <AddToCartButton addToCart={props.addToCart} product={popsicle} />
+          </div>
         </article>
       ))}
     </div>
