@@ -52,7 +52,6 @@ const Cart = (props) => {
         </div>
       </div>
       <div className="separator"></div>
-      <Checkout />
     </div>
   );
   return props.cart.length > 0 ? loaded() : loading;

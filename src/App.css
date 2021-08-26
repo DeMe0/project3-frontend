@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sigmar+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
 html{
   min-height:100%;/* make sure it is at least as tall as the viewport */
@@ -47,6 +47,23 @@ button.menu {
   float: left;
   /* margin-bottom: 20%;
   padding-bottom: 40%; */
+}
+
+.addToCartButton {
+  height: 30px;
+  background-color: black;
+  border: none;
+}
+
+.removeFromCartButton {
+  border: none;
+  background-color: #222;
+}
+#trashIcon {
+  color: grey;
+}
+#trashIcon:hover {
+  color: red;
 }
 
 .App .logo {
@@ -207,7 +224,6 @@ button.menu {
   margin: 0 auto;
 }
 
-
 .carousel-item img {
   width: 80%;
   height: 300px;
@@ -313,14 +329,13 @@ button.menu {
   box-shadow: 2px 2px 20px pink !important;
 }
 
-.BootstrapCard .name{
+.BootstrapCard .name {
   text-shadow: 2px 2px 4px #000000;
 }
 
-.BootstrapCard .item{
+.BootstrapCard .item {
   text-shadow: 2px 2px 4px #000000;
 }
-
 
 #popCard {
   grid-row-start: 4;
@@ -357,6 +372,7 @@ button.menu {
 .priceLine {
   display: flex;
   justify-content: center;
+  align-items: baseline;
 }
 .priceLine p {
   padding-right: 1.2em;
@@ -383,8 +399,28 @@ button.menu {
   size: 25px;
 }
 
+.icecream .cart {
+  padding-left: 8px;
+  transition-property: font-size;
+  transition-property: color;
+  transition-duration: 50ms;
+  font-size: 1.7em;
+  color: white;
+  margin: 0 auto;
+}
+
 .icecream .cart:hover {
   font-size: 30px;
+}
+
+.offers .cart {
+  padding-left: 8px;
+  transition-property: font-size;
+  transition-property: color;
+  transition-duration: 50ms;
+  font-size: 1.7em;
+  color: white;
+  margin: 0 auto;
 }
 
 /* popsicles */
@@ -414,12 +450,16 @@ button.menu {
 .popsicles .cart {
   padding-left: 8px;
   transition-property: font-size;
+  transition-property: color;
   transition-duration: 50ms;
-  size: 25px;
+  font-size: 1.7em;
+  color: white;
+  margin: 0 auto;
 }
 
 .popsicles .cart:hover {
   font-size: 30px;
+  color: red;
 }
 
 /* drinks */
@@ -449,12 +489,16 @@ button.menu {
 .drinks .cart {
   padding-left: 8px;
   transition-property: font-size;
+  transition-property: color;
   transition-duration: 50ms;
-  size: 25px;
+  font-size: 1.7em;
+  color: white;
+  margin: 0 auto;
 }
 
 .drinks .cart:hover {
   font-size: 30px;
+  color: red;
 }
 
 /* italianices */
@@ -486,45 +530,45 @@ button.menu {
 .italianices .cart {
   padding-left: 8px;
   transition-property: font-size;
+  transition-property: color;
   transition-duration: 50ms;
-  size: 25px;
+  font-size: 1.7em;
+  color: white;
+  margin: 0 auto;
 }
 
 .italianices .cart:hover {
   font-size: 30px;
+  color: red;
 }
 
 /* footer */
 
-.footer{
-  /* margin:10px;  */
-  /* margin-top: 35%;
-  opacity:0.8;  */
-
+.footer {
+  margin: 10px;
+  opacity: 0.8;
+  padding-bottom: 15%;
 }
 
-.footer hr{
-  margin-top:40px; 
-  margin-bottom:20px;
-  height: 100%;
+.footer hr {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-
-.footer h2{
-  margin-top:20px; 
-  font-family: 'Berkshire Swash', cursive;
+.footer h2 {
+  margin-top: 20px;
+  font-family: "Berkshire Swash", cursive;
 }
 
-.footer h4{
-  margin-top:10px; 
-  font-family: 'Berkshire Swash', cursive;
+.footer h4 {
+  margin-top: 10px;
+  font-family: "Berkshire Swash", cursive;
 }
 
-.footer img{
-  height:100px; 
-  width:100px; 
+.footer img {
+  height: 100px;
+  width: 100px;
 }
-
 
 /* cart */
 .cartLine {
@@ -563,6 +607,9 @@ button.menu {
   font-size: 25px;
   text-align: left;
   font-weight: bold;
+  margin: 5%;
+  text-align: center;
+  text-shadow: 2px 2px 4px pink;
 }
 
 .About img {
@@ -570,26 +617,25 @@ button.menu {
   height: 200px;
 }
 
-
-.namecard{
-  display:flex; 
-  flex-wrap:wrap; 
-  justify-content:space-around;
-  padding:10px;  
+.namecard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
 }
 
-.namecard img{
-  margin:0 auto; 
-  height:260px; 
+.namecard img {
+  margin: 0 auto;
+  height: 100%;
 }
 
-.namecard .title{
-  color:black; 
-  font-family: 'Besley', serif;
+.namecard .title {
+  color: black;
+  font-family: "Besley", serif;
   font-size: 25px;
 }
-.namecard p{
-  color:black; 
+.namecard p {
+  color: black;
 }
 h4.Footer {
   margin-top: 8%;
@@ -597,60 +643,54 @@ h4.Footer {
   position: fixed;
 }
 
-.modal-body{
-  text-align:center;
+.modal-body {
+  text-align: center;
 }
-.modal-header{
-  justify-content: center!important
+.modal-header {
+  justify-content: center !important;
 }
 
-.modal-body span{
+.modal-body span {
   font-size: 30px;
 }
 
-button#checkoutbutton{
-  background-color: grey!important;
-  border: none;
+button#checkoutbutton {
+  background-color: grey !important;
 }
 
 
-@media only screen and (min-width: 768px) {
-
-    .App .logo{ 
-      width:60%; 
-      margin-top:-10%; 
-      margin-bottom:-15%; 
-    };
-  
-    .Carousel{
-      width:100%; 
-    }
+  @media screen and (min-width: 768px) {
     .App .logo {
       width: 60%;
       margin-top: -10%;
       padding-bottom: -15%;
     }
-  
+
+    .footer {
+      margin: 10px;
+      opacity: 0.8;
+      padding-bottom: 9%;
+    }
+
     .Carousel {
       width: 100%;
     }
-  
+
     .carousel-item img {
       width: 60%;
       height: 350px;
       margin: 0 auto;
     }
-  
     .parlour img {
       width: 600px;
       height: 430px;
       margin: 0 auto;
     }
-  
+
     .cartLine p {
       font-size: 0.7em;
     }
-  
+
     .cartContainer {
       margin: 1em;
       border: 1px white solid;
@@ -658,38 +698,40 @@ button#checkoutbutton{
       background: #222;
       color: white;
     }
-  
-  .About img{
-    width:66%; 
-  }
-  
-  .About h1{
-    font-size:40px;
-  }
-  
-  .namecard{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width:66%; 
-  }
-  
-  .cartBorderWrap {
-      max-width: 300px;
-      padding: 1rem;
-      position: relative;
-      background: radial-gradient(
-        circle farthest-corner at center center,
-        pink 0%,
-        #ffff00 25%,
-        #05c1ff 50%,
-        #ffff00 75%,
-        pink 100%
-      );
-      padding: 3px;
-      margin: auto;
+
+    .About img {
+      width: 66%;
+    }
+
+    .About h1 {
+      font-size: 40px;
+    }
+
+    .namecard {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 66%;
     }
   
+  .cartBorderWrap {
+    max-width: 300px;
+    padding: 1rem;
+    position: relative;
+    background: radial-gradient(
+      circle farthest-corner at center center,
+      pink 0%,
+      #ffff00 25%,
+      #05c1ff 50%,
+      #ffff00 75%,
+      pink 100%
+    );
+    padding: 3px;
+    margin: auto;
+  }
+}
+
+  @media screen and (min-width: 768px) {
     .App .logo {
       width: 60%;
       margin-top: -10%;
@@ -832,33 +874,33 @@ button#checkoutbutton{
     margin-top: 10%;
   }
 
-.team{
-  display:flex;
-  justify-content:space-around;
-  margin:20px;  
-}
+  .team {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
 
-.namecard img{
-  width:90%; 
-  height:280px; 
-}
+  .namecard img {
+    width: 100%;
+    height: 260px;
+  }
 
-.footer{
-  margin:20px; 
-}
+  .footer {
+    margin: 20px;
+    padding-bottom: 7%;
+  }
 
-.footer hr{
-  margin-top:60px; 
-  margin-bottom: 40px;
+  .footer hr {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
 }
-
-}
-@media screen and (min-width: 1440px){
-  .App .logo{ 
-    width:33%; 
-    margin-top:-9%; 
-    margin-bottom:-10%;
-	}
+@media screen and (min-width: 1440px) {
+  .App .logo {
+    width: 33%;
+    margin-top: -9%;
+    margin-bottom: -10%;
+  }
   .offers {
     margin: 0 auto;
   }
@@ -888,21 +930,19 @@ button#checkoutbutton{
     height: 550px;
   }
 
-.About img{
-  width:30%; 
-  height:230px; 
-}
+  .About img {
+    width: 30%;
+    height: 230px;
+  }
 
-.namecard img{
-  width:66%; 
-  height:290px; 
-}
+  .namecard img {
+    width: 66%;
+    height: 290px;
+  }
   .italianices img {
     width: 550px;
     height: 500px;
   }
-}
-@media screen and (min-width: 1440px) {
   .App .logo {
     width: 33%;
     margin-top: -9%;
