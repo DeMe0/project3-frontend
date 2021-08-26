@@ -522,6 +522,22 @@ button.menu {
   background-color: white;
   margin: 0.5em auto;
 }
+/* checkout */
+.modal-body{
+  text-align:center;
+}
+.modal-header{
+  justify-content: center!important
+}
+
+.modal-body span{
+  font-size: 30px;
+}
+
+button#checkoutbutton{
+  background-color: grey!important;
+  border: none;
+}
 
 @media screen and (min-width: 768px) {
   .App .logo {

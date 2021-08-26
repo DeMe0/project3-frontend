@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import Items from "../Componets/Items";
+import { Route, Link, Switch } from "react-router-dom";
+import Checkout from "./Checkout";
+
 import RemoveFromCartButton from "../Componets/RemoveFromCartButton";
 
 const Cart = (props) => {
@@ -46,6 +49,7 @@ const Cart = (props) => {
         </div>
       </div>
       <div className="separator"></div>
+     <Checkout />
     </div>
   );
   return props.cart.length > 0 ? loaded() : loading;

@@ -13,6 +13,7 @@ import Offers from "./Pages/Offers";
 import Cart from "./Pages/Cart";
 import About from "./Pages/About";
 import Footer from "./Componets/Footer";
+import Checkout from './Pages/Checkout'
 
 function App() {
   const url = "https://project3-icecream.herokuapp.com";
@@ -171,6 +172,9 @@ function App() {
             cart={cart}
             removeFromCart={removeFromCart}
           />
+        </Route>
+        <Route exact path ='/checkout'>
+          <Checkout />
         </Route>
       </main>
       <Footer />
