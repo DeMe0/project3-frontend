@@ -37,7 +37,9 @@ const Cart = (props) => {
             </h3>
           </div>
         </div>
+        
       </div>
+      <Checkout />
     </div>
   );
   const loading = (
