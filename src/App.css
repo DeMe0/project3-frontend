@@ -11,6 +11,15 @@
   margin: 0;
   color: white;
 }
+html{
+  height: 100%
+}
+body {
+  height: 100%
+}
+#root{
+  height: 100%
+}
 .App .logo {
   width: 80%;
   margin-top: -5%;
