@@ -3,21 +3,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
+html{
+  min-height:100%;/* make sure it is at least as tall as the viewport */
+  position:relative;
+}
+html, body {
+  overflow: auto;
+}
+
 .App {
   text-align: center;
   background-color: black;
   background-size: cover;
-  height: 100%;
+  
   width: 100%;
   margin: 0;
   color: white;
 }
 
 body {
-  height: 100%;
+  height:1024px;
+  background-color: black!important;
+  background-size: cover!important
 }
-#root {
-  height: 100%;
+#root{
+  height: 1024px
 }
 .App .logo {
   width: 80%;
@@ -119,6 +129,9 @@ button.menu {
   text-align: left !important;
   margin: 0 28%;
 } */
+.mycart{
+  margin-bottom: 50%;
+}
 
 .cartColumnNames {
   display: flex;
@@ -534,7 +547,7 @@ button.menu {
 
 /* footer */
 
-.footer {
+  .footer {
   margin: 10px;
   opacity: 0.8;
   padding-bottom: 15%;
@@ -627,10 +640,10 @@ button.menu {
 .namecard p {
   color: black;
 }
-h1.Footer {
+h4.Footer {
   margin-top: 8%;
   margin-bottom: 20%;
-  position: relative;
+  position: fixed;
 }
 
 .modal-body {
@@ -648,19 +661,18 @@ button#checkoutbutton {
   background-color: grey !important;
 }
 
-@media screen and (min-width: 768px) {
-  .App .logo {
-    width: 60%;
-    margin-top: -10%;
-    margin-bottom: -15%;
-  }
+@media only screen and (min-width: 768px) {
 
-  .Carousel {
-    width: 100%;
-  }
-  /* Footer */
+    .App .logo{ 
+      width:60%; 
+      margin-top:-10%; 
+      margin-bottom:-15%; 
+    };
+  
+    .Carousel{
+      width:100%; 
+    }
 
-  @media screen and (min-width: 768px) {
     .App .logo {
       width: 60%;
       margin-top: -10%;
@@ -692,7 +704,6 @@ button#checkoutbutton {
     .cartLine p {
       font-size: 0.7em;
     }
-
     .cartContainer {
       margin: 1em;
       border: 1px white solid;
@@ -732,7 +743,6 @@ button#checkoutbutton {
     margin: auto;
   }
 
-  @media screen and (min-width: 768px) {
     .App .logo {
       width: 60%;
       margin-top: -10%;
@@ -801,7 +811,7 @@ button#checkoutbutton {
     .About h1 {
       font-size: 40px;
     }
-  }
+  
 
   .button menu {
     margin-bottom: 20%;
@@ -825,6 +835,12 @@ button#checkoutbutton {
   .italianices img {
     width: 600px;
     height: 500px;
+  }
+  .Footer {
+    /* margin-top: 50%;
+    margin-bottom: -20%; */
+    margin: 50%;
+    position: fixed;
   }
 }
 
