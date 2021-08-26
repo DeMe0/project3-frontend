@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Sigmar+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Besley:wght@500&display=swap');
 
 .App {
   text-align: center;
@@ -475,6 +476,37 @@ button.menu {
   height: 200px;
 }
 
+
+.namecard{
+  display:flex; 
+  flex-wrap:wrap; 
+  justify-content:space-around;
+  padding:10px;  
+}
+
+.namecard img{
+  margin:0 auto; 
+  height:260px; 
+}
+
+.namecard .title{
+  color:black; 
+  font-family: 'Besley', serif;;
+}
+.namecard p{
+  color:black; 
+}
+
+@media screen and (min-width: 768px){
+  .App .logo{ 
+    width:60%; 
+    margin-top:-10%; 
+    margin-bottom:-15%; 
+  };
+
+  .Carousel{
+    width:100%; 
+  }
 /* Footer */
 .Footer {
   margin-top: 8%;
@@ -574,6 +606,22 @@ button#checkoutbutton{
     color: white;
   }
 
+.About img{
+  width:66%; 
+}
+
+.About h1{
+  font-size:40px;
+}
+
+.namecard{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:66%; 
+}
+
+}
   .cartBorderWrap {
     max-width: 300px;
     padding: 1rem;
@@ -733,6 +781,23 @@ button#checkoutbutton{
     margin-top: 10%;
   }
 
+.team{
+  display:flex;
+  justify-content:space-around;
+  margin:20px;  
+}
+
+.namecard img{
+  width:90%; 
+  height:280px; 
+}
+
+}
+@media screen and (min-width: 1440px){
+  .App .logo{ 
+    width:33%; 
+    margin-top:-9%; 
+    margin-bottom:-10%; 
   .offers {
     margin: 0 auto;
   }
@@ -762,6 +827,15 @@ button#checkoutbutton{
     height: 550px;
   }
 
+.About img{
+  width:30%; 
+  height:230px; 
+}
+
+.namecard img{
+  width:66%; 
+  height:290px; 
+}
   .italianices img {
     width: 550px;
     height: 500px;
